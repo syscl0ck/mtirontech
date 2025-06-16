@@ -1,0 +1,64 @@
+import { Code, Layers, Rocket } from 'lucide-react';
+
+const LogoLarge = () => (
+  <svg width="150" height="150" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="animate-fade-in-up">
+    <path d="M50 0L93.3 25V75L50 100L6.7 75V25L50 0Z" fill="#818cf8"/>
+    <path d="M50 15L84.64 32.5V67.5L50 85L15.36 67.5V32.5L50 15Z" fill="#3730a3"/>
+    <path d="M50 28L76 41.5V58.5L50 72L24 58.5V41.5L50 28Z" fill="white"/>
+  </svg>
+);
+
+const InfoPane = ({ icon, title, children, bgColor }) => {
+  return (
+    <div className={`h-screen flex items-center justify-center ${bgColor} text-white`}>
+      <div className="text-center p-8 max-w-4xl">
+        <div className="mb-6 inline-block bg-white/10 p-4 rounded-full">
+            {icon}
+        </div>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">{title}</h2>
+        <p className="text-lg md:text-xl text-gray-300">
+            {children}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default function HomePage() {
+  return (
+    <div>
+      <section className="h-[calc(100vh-80px)] min-h-[600px] flex flex-col items-center justify-center text-center bg-gray-900 p-6">
+        <LogoLarge />
+        <h1 
+          className="mt-8 text-5xl md:text-7xl font-extrabold text-white animate-fade-in-up"
+          style={{ animationDelay: '0.2s' }}
+        >
+          Build <span className="text-indigo-400">Great</span> Things
+        </h1>
+        <p 
+          className="mt-4 text-lg md:text-xl text-gray-400 max-w-2xl animate-fade-in-up"
+          style={{ animationDelay: '0.4s' }}
+        >
+          We architect and deliver scalable, high-performance solutions that power the future of technology.
+        </p>
+      </section>
+
+      <InfoPane 
+        bgColor="bg-gray-800"
+        icon={<Layers size={48} className="text-indigo-300"/>}
+        title="Placeholder for Animation 1"
+      >
+        This is a full-screen section. You can replace this content with your own custom components and animations.
+      </InfoPane>
+      
+      <InfoPane
+        bgColor="bg-indigo-900"
+        icon={<Rocket size={48} className="text-indigo-300"/>}
+        title="Placeholder for Animation 2"
+      >
+        Each pane can have a unique background and layout.
+      </InfoPane>
+
+    </div>
+  );
+}

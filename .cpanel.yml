@@ -1,0 +1,4 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/mtirqbfa/repositories/mtirontech/tech-landing-page

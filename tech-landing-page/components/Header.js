@@ -23,7 +23,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-3">
           <Logo />
           <span className="text-xl font-bold text-white hidden sm:block">
-            TechCo
+            Mountain Iron Technology
           </span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">

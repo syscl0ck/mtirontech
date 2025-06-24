@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/mtirqbfa/repositories/mtirontech/tech-landing-page
+    - export NODE_ENV=production
+    - /opt/cpanel/ea-nodejs16/bin/npm install
+    - /opt/cpanel/ea-nodejs16/bin/npm run build  # if applicable
+    - /opt/cpanel/ea-nodejs16/bin/npm run prod
+    - /opt/cpanel/ea-nodejs16/bin/pm2 restart all # if using pm2

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^12.18.1",
     "@napi-rs/wasm-runtime": "^0.2.11",
     "@next/eslint-plugin-next": "^14.2.3",
     "@nolyfill/is-core-module": "^1.0.39",

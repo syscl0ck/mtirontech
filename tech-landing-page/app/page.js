@@ -1,4 +1,5 @@
 import { Code, Layers, Rocket } from 'lucide-react';
+import ScrollAnimation from '../components/ScrollAnimation';
 
 const LogoLarge = () => (
   <svg width="150" height="150" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="animate-fade-in-up">
@@ -39,24 +40,20 @@ export default function HomePage() {
           className="mt-4 text-lg md:text-xl text-gray-400 max-w-2xl animate-fade-in-up"
           style={{ animationDelay: '0.4s' }}
         >
-          We architect and deliver scalable, high-performance solutions that power the future of technology.
+          We provide businesses with the help, tools, and information they need to keep their operations running smoothly. 
         </p>
       </section>
 
-      <InfoPane 
-        bgColor="bg-gray-800"
-        icon={<Layers size={48} className="text-indigo-300"/>}
-        title="Placeholder for Animation 1"
-      >
-        This is a full-screen section. You can replace this content with your own custom components and animations.
-      </InfoPane>
+      {/* --- Scroll-based Animation Section --- */}
+      <ScrollAnimation />
       
+      {/* --- Static Placeholder Section --- */}
       <InfoPane
         bgColor="bg-indigo-900"
         icon={<Rocket size={48} className="text-indigo-300"/>}
         title="Placeholder for Animation 2"
       >
-        Each pane can have a unique background and layout.
+        Each pane can have a unique background and layout. This modular approach makes it easy to add or remove sections as your marketing narrative evolves. Focus on one key message per section.
       </InfoPane>
 
     </div>

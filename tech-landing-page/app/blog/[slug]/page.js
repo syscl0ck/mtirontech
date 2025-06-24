@@ -1,4 +1,4 @@
-import { getPostData, getAllPostSlugs } from '@/lib/posts';
+import { getPostData, getAllPostSlugs } from '../../../lib/posts';
 import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {

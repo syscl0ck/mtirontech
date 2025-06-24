@@ -8,7 +8,6 @@ const isProd = process.env.NODE_ENV === "production";
 /** @type {import('next').NextConfig} */
 const config = {
   output: "export",
-  output: "standalone",
   basePath: isProd ? "/mtirontech" : "",
   assetPrefix: isProd ? "/mtirontech/" : "",
   images: {

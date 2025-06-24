@@ -19,6 +19,8 @@ COPY . .
 # The output will be in the .next directory
 RUN npm run build
 
+COPY --from=builder ./out ./out
+
 # 2. Runner Stage: Create the final, smaller image
 FROM node:20-alpine AS runner
 
@@ -37,6 +39,8 @@ COPY --from=builder /app/public ./public
 
 # The `posts` directory needs to be copied to the standalone server
 COPY --from=builder /app/posts ./posts
+
+RUN ["npx", "next", "export"]
 
 # The Next.js server will run on port 3000 by default.
 EXPOSE 3000

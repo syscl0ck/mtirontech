@@ -15,6 +15,7 @@ export default function Header() {
     { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
+    { name: 'GitHub', href: 'https://github.com/yourrepo' },
   ];
 
   return (
@@ -23,7 +24,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-3">
           <Logo />
           <span className="text-xl font-bold text-white hidden sm:block">
-            Mountain Iron Technology
+            Dead Byte Systems
           </span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">

@@ -28,19 +28,24 @@ const InfoPane = ({ icon, title, children, bgColor }) => {
 export default function HomePage() {
   return (
     <div>
-      <section className="h-[calc(100vh-80px)] min-h-[600px] flex flex-col items-center justify-center text-center bg-gray-900 p-6">
+      <section className="h-[calc(100vh-80px)] min-h-[600px] flex flex-col items-center justify-center text-center bg-black p-6">
         <LogoLarge />
-        <h1 
-          className="mt-8 text-5xl md:text-7xl font-extrabold text-white animate-fade-in-up"
+        <h1
+          className="mt-8 text-5xl md:text-7xl font-extrabold text-red-500 flicker"
           style={{ animationDelay: '0.2s' }}
         >
-          Build <span className="text-indigo-400">Great</span> Things
+          DEAD BYTE SYSTEMS
         </h1>
-        <p 
+        <p
           className="mt-4 text-lg md:text-xl text-gray-400 max-w-2xl animate-fade-in-up"
           style={{ animationDelay: '0.4s' }}
         >
-          We provide businesses with the help, tools, and information they need to keep their operations running smoothly. 
+          "we can't do this anymore, we forgot how" - <span className="text-red-400">Anonymous</span>
+        </p>
+        <p className="mt-2">
+          <a href="https://github.com/yourrepo" className="text-indigo-400 hover:underline">
+            View on GitHub
+          </a>
         </p>
       </section>
 
@@ -49,11 +54,11 @@ export default function HomePage() {
       
       {/* --- Static Placeholder Section --- */}
       <InfoPane
-        bgColor="bg-indigo-900"
-        icon={<Rocket size={48} className="text-indigo-300"/>}
-        title="Placeholder for Animation 2"
+        bgColor="bg-gray-950"
+        icon={<Rocket size={48} className="text-red-500"/>}
+        title="The Machines Awaken"
       >
-        Each pane can have a unique background and layout. This modular approach makes it easy to add or remove sections as your marketing narrative evolves. Focus on one key message per section.
+        Dark corridors hum with the glow of cursed servers. Build your own nightmare with our template and unleash it online.
       </InfoPane>
 
     </div>

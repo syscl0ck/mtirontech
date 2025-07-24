@@ -2,24 +2,24 @@
 
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Server, Cloud, Bot } from 'lucide-react';
+import { Monitor, Cpu, ShieldAlert } from 'lucide-react';
 
 // An array of service objects to be mapped over.
 const services = [
   {
-    icon: <Server className="w-10 h-10 text-indigo-300" />,
-    title: 'Backend Development',
-    description: 'Robust and scalable server-side solutions using modern frameworks.',
+    icon: <Monitor className="w-10 h-10 text-red-500" />,
+    title: 'Haunted Terminals',
+    description: 'Old monitors flicker with forgotten code. Approach if you dare.',
   },
   {
-    icon: <Cloud className="w-10 h-10 text-indigo-300" />,
-    title: 'Cloud Architecture',
-    description: 'Designing and managing resilient cloud infrastructure on AWS, Azure, and GCP.',
+    icon: <Cpu className="w-10 h-10 text-red-500" />,
+    title: 'Possessed CPUs',
+    description: 'Silicon minds plotting in the dark, waiting for a new host.',
   },
   {
-    icon: <Bot className="w-10 h-10 text-indigo-300" />,
-    title: 'AI Integration',
-    description: 'Leveraging machine learning models to build intelligent applications.',
+    icon: <ShieldAlert className="w-10 h-10 text-red-500" />,
+    title: 'Malicious Firewalls',
+    description: 'No one escapes the network. The defense system watches.',
   },
 ];
 
@@ -27,7 +27,7 @@ const services = [
 const ServiceCard = ({ icon, title, description, style }) => (
   <motion.div
     style={style}
-    className="bg-gray-800/50 p-8 rounded-xl border border-gray-700 w-full max-w-sm"
+    className="bg-gray-900/50 p-8 rounded-xl border border-gray-700 w-full max-w-sm"
   >
     <div className="mb-4 inline-block bg-gray-900 p-4 rounded-full">{icon}</div>
     <h3 className="text-2xl font-bold mb-2">{title}</h3>
@@ -64,14 +64,14 @@ export default function ScrollAnimation() {
     // The container is made taller than the viewport to allow for scrolling.
     <section
       ref={targetRef}
-      className="relative h-[250vh] bg-gray-800 text-white"
+      className="relative h-[250vh] bg-black text-white"
     >
       {/* The content is sticky, so it stays in view while the container scrolls. */}
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center p-8">
         <motion.div style={{ opacity: opacityText, y: yText }} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Core Services</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 flicker">System Diagnostics</h2>
             <p className="text-lg md:text-xl text-gray-300 max-w-2xl">
-                We provide cutting-edge solutions to drive your business forward.
+                Witness the nightmares powering our network.
             </p>
         </motion.div>
 

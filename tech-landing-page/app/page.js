@@ -11,8 +11,8 @@ const LogoLarge = () => (
 
 const InfoPane = ({ icon, title, children, bgColor }) => {
   return (
-    <div className={`h-screen flex items-center justify-center ${bgColor} text-white`}>
-      <div className="text-center p-8 max-w-4xl">
+    <div className={`h-screen flex items-center justify-center ${bgColor} text-white px-4`}>
+      <div className="text-center p-8 max-w-4xl rounded-2xl bg-black/40 backdrop-blur-lg shadow-2xl">
         <div className="mb-6 inline-block bg-white/10 p-4 rounded-full">
             {icon}
         </div>
@@ -28,10 +28,10 @@ const InfoPane = ({ icon, title, children, bgColor }) => {
 export default function HomePage() {
   return (
     <div>
-      <section className="h-[calc(100vh-80px)] min-h-[600px] flex flex-col items-center justify-center text-center bg-black p-6">
+      <section className="h-[calc(100vh-80px)] min-h-[600px] flex flex-col items-center justify-center text-center hero-gradient p-6">
         <LogoLarge />
         <h1
-          className="mt-8 text-5xl md:text-7xl font-extrabold text-red-500 flicker-rapid"
+          className="mt-8 text-5xl md:text-7xl font-extrabold text-red-500 flicker-rapid glow"
           style={{ animationDelay: '0.2s' }}
         >
           DEAD BYTE SYSTEMS
@@ -54,11 +54,19 @@ export default function HomePage() {
       
       {/* --- Static Placeholder Section --- */}
       <InfoPane
-        bgColor="bg-gray-950"
+        bgColor="bg-gradient-to-r from-gray-900 via-purple-900 to-black"
         icon={<Rocket size={48} className="text-red-500"/>}
         title="The Machines Awaken"
       >
         Dark corridors hum with the glow of cursed servers. Build your own nightmare with our template and unleash it online.
+      </InfoPane>
+
+      <InfoPane
+        bgColor="bg-gradient-to-r from-blue-900 via-sky-800 to-gray-900"
+        icon={<Layers size={48} className="text-indigo-400"/>}
+        title="Neon Networks"
+      >
+        Dazzling lights guide you through pristine codebases crafted with precision.
       </InfoPane>
 
     </div>

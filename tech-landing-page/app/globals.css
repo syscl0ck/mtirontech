@@ -10,3 +10,7 @@ body {
 .flicker {
   @apply animate-flicker;
 }
+
+.flicker-rapid {
+  @apply animate-flicker-rapid;
+}

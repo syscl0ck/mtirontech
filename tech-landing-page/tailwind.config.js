@@ -18,6 +18,7 @@ module.exports = {
       animation: {
         'fade-in-up': 'fadeInUp 1s ease-out forwards',
         'flicker': 'flicker 2s infinite steps(2, start)',
+        'flicker-rapid': 'flickerRapid 0.2s infinite',
       },
       keyframes: {
         fadeInUp: {
@@ -27,6 +28,10 @@ module.exports = {
         flicker: {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.2' },
+        },
+        flickerRapid: {
+          '0%, 90%': { opacity: '1' },
+          '90%, 100%': { opacity: '0' },
         },
       },
     },
